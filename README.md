@@ -1,1 +1,1 @@
-# framework-practice
+# spring-framework-practice
