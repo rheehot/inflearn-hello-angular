@@ -136,11 +136,50 @@
 
 3. hello.component.css
 
+<br/>
+
+## Angular를 이해하기 위한 타입스크립트 지식
+
+1. typescript 시작
+
+   ```bash
+   tcs -init
+   ```
+
+2. typescript에서 타입 지정
+
+   ```typescript
+   let num : number = 10;
    
-
+   num.push(); // Error! -> 'number'로 지정했기 때문에!
    
+   function testing() : string {
+       return 10; // Error! -> 반환이 'string'이기 때문에!
+   }
+   ```
 
+3. typescript class 가 javascript에서 
 
+   ```typescript
+   class AppComponent { 
+   
+   }	
+   ```
+
+4. jhava (EC 6)
+
+   ```javascript
+   var AppComponent = (function(){
+   	function AppComponent(){
+   	
+   	}
+   	return AppComponent;
+   }());
+   ```
+
+   - ㅇ브라우저가 ES 6를 읽지 못한다해도 Typescript에서 tsconfig.json에서 버전만 바꿔주면 알아서 맞춰서 컴파일 해준다.
+
+5. 
 
 
 
