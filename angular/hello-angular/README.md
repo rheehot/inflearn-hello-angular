@@ -166,7 +166,7 @@
    }	
    ```
 
-4. jhava (EC 6)
+4. javascript (ES 6)
 
    ```javascript
    var AppComponent = (function(){
@@ -179,7 +179,85 @@
 
    - ㅇ브라우저가 ES 6를 읽지 못한다해도 Typescript에서 tsconfig.json에서 버전만 바꿔주면 알아서 맞춰서 컴파일 해준다.
 
-5. 
+
+<br/>
+
+기본적으로 ES6 보다 typesript의 class가 더 많은 기능을 갖고 있습니다.
+
+
+
+5. 상속 기능
+
+```javascript
+class Parent {
+    
+}
+
+class App extends Parent{
+	
+}
+```
+
+6. 인터페이스
+
+```javascript
+interface Person {
+	name: string
+	age: number
+}
+
+let kim: Person
+```
+
+7. 접근제한자 (ES6 에는 없다.)
+
+```javascript
+class Parent { 
+	public one = 10;
+	protected two = 10;
+	private three = 10;
+}
+
+class Child extends Parent {
+    constructor() {
+        super();
+        this.one
+        this.two
+    }
+}
+
+let p = new Parent();
+p.one // one만 접근 가능!
+```
+
+8. 생성자
+
+```javascript
+class Car {
+    //-- typescript만 가능
+	constructor(public age: number) {
+	}
+    
+    //-- 위와 같은 표현
+    age
+    constructor(age:number){
+       this.age = age; 
+    }
+}
+
+let car = new Car(10);
+```
+
+public을 붙이면 자동으로 Car의 멤버변수로 된다.
+
+---
+
+```bash
+ng generate component {컴포넌트명}
+ng g c {컴포넌트명}
+```
+
+
 
 
 
