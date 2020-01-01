@@ -9,11 +9,11 @@ export class SectionComponent implements OnInit {
 
   present = 'welcome';
 
+  
   constructor() { }
 
   startTime($event){
     this.present = $event;
-
   }
 
   ngOnInit() {
