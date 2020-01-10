@@ -7,7 +7,7 @@ import java.text.ParseException;
 import java.util.Locale;
 
 @Component
-public class PersonFormatter{
+public class PersonFormatter {
 //        implements Formatter<Person> {
 
 //    @Override

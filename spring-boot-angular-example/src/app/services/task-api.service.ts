@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core'
-import { Observable, Subject } from "rxjs";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Task } from 'app/models/task';
-import { Page } from "../models/common";
+import {Injectable} from '@angular/core'
+import {Observable, Subject} from "rxjs";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Task} from 'app/models/task';
+import {Page} from "../models/common";
 
 
 @Injectable()

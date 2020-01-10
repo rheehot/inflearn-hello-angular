@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as moment from 'moment';
-import { interval } from 'rxjs';
-import { map, distinctUntilChanged } from "rxjs/operators";
-import { Router } from '@angular/router';
+import {interval} from 'rxjs';
+import {map, distinctUntilChanged} from "rxjs/operators";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-clock',
@@ -13,18 +13,18 @@ export class ClockComponent implements OnInit {
 
   timeString;
 
-    constructor(private router : Router) { 
+  constructor(private router: Router) {
 
-      interval(1000)
-        .pipe(map(() => {
-          return moment().format('YYYY-MM-DD HH:mm:ss')
-        }))
-        .subscribe(data=>{
-          this.timeString=data;
-        })
-    }
+    interval(1000)
+      .pipe(map(() => {
+        return moment().format('YYYY-MM-DD HH:mm:ss')
+      }))
+      .subscribe(data => {
+        this.timeString = data;
+      })
+  }
 
-  goStopwatch(){
+  goStopwatch() {
     this.router.navigateByUrl('/stopwatch');
   }
 

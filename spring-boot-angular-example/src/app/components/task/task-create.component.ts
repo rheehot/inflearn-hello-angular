@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { TaskApiService } from '../../services/task-api.service'
-import { Router } from '@angular/router'
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {Component} from '@angular/core';
+import {TaskApiService} from '../../services/task-api.service'
+import {Router} from '@angular/router'
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
     selector: 'create-task',

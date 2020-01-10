@@ -1,7 +1,7 @@
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { TaskApiService } from "../../services/task-api.service";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Component, OnInit } from "@angular/core";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {TaskApiService} from "../../services/task-api.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Component, OnInit} from "@angular/core";
 
 @Component({
     selector: 'edit-task',

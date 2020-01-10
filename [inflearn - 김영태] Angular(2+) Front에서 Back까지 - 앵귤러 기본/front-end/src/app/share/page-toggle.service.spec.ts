@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { PageToggleService } from './page-toggle.service';
+import {PageToggleService} from './page-toggle.service';
 
 describe('PageToggleService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

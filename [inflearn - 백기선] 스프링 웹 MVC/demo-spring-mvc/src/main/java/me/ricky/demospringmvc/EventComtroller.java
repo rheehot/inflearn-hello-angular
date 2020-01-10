@@ -16,8 +16,8 @@ public class EventComtroller {
 
     // @RequestMapping(value = "/events", method = RequestMethod.GET)
     @GetMapping("/events")
-    public String events(Model model){
-        model.addAttribute("events",eventService.getEvents());
+    public String events(Model model) {
+        model.addAttribute("events", eventService.getEvents());
         return "events";
     }
 }

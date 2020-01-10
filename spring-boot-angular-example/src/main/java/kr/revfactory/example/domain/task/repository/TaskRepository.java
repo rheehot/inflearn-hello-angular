@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public interface TaskRepository extends CrudRepository<Task, Long> {
 
-	Page<Task> findAll(Pageable pageable);
+    Page<Task> findAll(Pageable pageable);
 
-	Optional<Task> findByIdAndVersion(Long id, String version);
+    Optional<Task> findByIdAndVersion(Long id, String version);
 }

@@ -23,7 +23,7 @@ public class EventService {
                 .endDateTime(LocalDateTime.of(2019, 1, 17, 12, 0))
                 .build();
 
-        return List.of(event1,event2);
+        return List.of(event1, event2);
     }
 
 

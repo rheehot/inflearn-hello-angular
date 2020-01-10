@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TimeDisplayComponent } from './time-display.component';
+import {TimeDisplayComponent} from './time-display.component';
 
 describe('TimeDisplayComponent', () => {
   let component: TimeDisplayComponent;
@@ -8,9 +8,9 @@ describe('TimeDisplayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimeDisplayComponent ]
+      declarations: [TimeDisplayComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

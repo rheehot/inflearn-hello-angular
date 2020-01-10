@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { TaskApiService } from '../../services/task-api.service'
-import { Task } from 'app/models/task';
-import { Observable } from "rxjs";
-import { Page } from "../../models/common";
+import {Component, OnInit} from '@angular/core';
+import {TaskApiService} from '../../services/task-api.service'
+import {Task} from 'app/models/task';
+import {Observable} from "rxjs";
+import {Page} from "../../models/common";
 
 @Component({
     selector: 'tasks',

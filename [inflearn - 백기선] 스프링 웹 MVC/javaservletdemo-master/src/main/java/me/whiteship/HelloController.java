@@ -18,6 +18,7 @@ public class HelloController {
     }
 
     @GetMapping("/sample")
-    public void sample() {}
+    public void sample() {
+    }
 
 }

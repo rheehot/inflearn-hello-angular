@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import {Component, OnInit, Input, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-time-display',
@@ -7,49 +7,49 @@ import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 })
 export class TimeDisplayComponent implements OnInit {
 
-  @Input() inputData:string;
+  @Input() inputData: string;
 
-  min:number = 0; 
-  sec:number = 0;
-  ms:number = 0;
+  min: number = 0;
+  sec: number = 0;
+  ms: number = 0;
 
   timeInterval;
 
-  constructor() { 
+  constructor() {
   }
 
-  timeStart(){
+  timeStart() {
     this.timeStop();
-    this.timeInterval = setInterval(()=>{
-      if(this.ms >= 100){
+    this.timeInterval = setInterval(() => {
+      if (this.ms >= 100) {
         this.ms = 0;
         this.sec++;
       }
-      if(this.sec >= 60){
+      if (this.sec >= 60) {
         this.sec = 0;
         this.min++;
       }
       this.ms++;
-    },10)
+    }, 10)
   }
 
-  timeStop(){
+  timeStop() {
     clearInterval(this.timeInterval)
   }
 
-  timeReset(){
+  timeReset() {
     this.timeStop();
-    this.ms=0;
+    this.ms = 0;
     this.sec = 0;
-    this.min =0;
+    this.min = 0;
 
   }
 
-  ngOnChanges(changes:SimpleChanges){ // 변화를 감지하는 함수
+  ngOnChanges(changes: SimpleChanges) { // 변화를 감지하는 함수
     console.log(changes)
-    for(let propName in changes){
-      if(propName == 'inputData'){
-        switch (changes[propName].currentValue){
+    for (let propName in changes) {
+      if (propName == 'inputData') {
+        switch (changes[propName].currentValue) {
           case 'start':
             this.timeStart();
             break;
@@ -67,22 +67,28 @@ export class TimeDisplayComponent implements OnInit {
   ngOnInit() {
     console.log('ng on init')
   }
+
   ngDoCheck() {
 
     console.log('ng do check')
   }
+
   ngAfterContentInit() {
     console.log('ng after content init')
   }
+
   ngAfterContentChecked() {
     console.log('ng after content checked')
   }
+
   ngAfterViewInit() {
     console.log('ng after view  init')
   }
+
   ngAfterViewChecked() {
     console.log('ng after view  checked')
   }
+
   ngOnDestroy() {
     console.log('destroy!')
   }

@@ -1,11 +1,13 @@
 /* SystemJS module definition */
 declare var module: NodeModule;
+
 interface NodeModule {
     id: string;
 }
 
 
-interface Callback { (data: any): void;
+interface Callback {
+    (data: any): void;
 }
 
 // declare class EventSource {

@@ -32,7 +32,7 @@ public class SampleControllerTest {
         person.setName("ricky");
         Person savedPerson = personRepository.save(person);
 
-        this.mockMvc.perform(get("/hello").param("id",savedPerson.getId().toString()))
+        this.mockMvc.perform(get("/hello").param("id", savedPerson.getId().toString()))
                 .andDo(print())
                 .andExpect(content().string("hello ricky"));
     }

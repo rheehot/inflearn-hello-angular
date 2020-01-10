@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 
 const routes: Routes = [
   {
-    path : '',
-    redirectTo:'stopwatch',
-    pathMatch:'full'
+    path: '',
+    redirectTo: 'stopwatch',
+    pathMatch: 'full'
   }
 ];
 
@@ -14,4 +14,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

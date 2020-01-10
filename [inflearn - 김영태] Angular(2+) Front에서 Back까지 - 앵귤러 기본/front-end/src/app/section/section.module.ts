@@ -1,19 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SectionComponent } from './section.component';
-import { StopwatchModule } from './stopwatch/stopwatch.module';
-import { RouterModule, Routes } from '@angular/router';
-import { StopwatchComponent } from './stopwatch/stopwatch.component';
-import { ClockComponent } from './clock/clock.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SectionComponent} from './section.component';
+import {StopwatchModule} from './stopwatch/stopwatch.module';
+import {RouterModule, Routes} from '@angular/router';
+import {StopwatchComponent} from './stopwatch/stopwatch.component';
+import {ClockComponent} from './clock/clock.component';
 
-const routes : Routes = [
+const routes: Routes = [
   {
-   path : 'stopwatch',
-   component : StopwatchComponent 
+    path: 'stopwatch',
+    component: StopwatchComponent
   },
   {
-    path:'clock',
-    component : ClockComponent
+    path: 'clock',
+    component: ClockComponent
   }
 ]
 
@@ -32,4 +32,5 @@ const routes : Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class SectionModule { }
+export class SectionModule {
+}

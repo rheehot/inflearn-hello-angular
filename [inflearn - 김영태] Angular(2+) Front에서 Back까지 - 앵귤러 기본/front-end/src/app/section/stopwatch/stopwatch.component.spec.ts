@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { StopwatchComponent } from './stopwatch.component';
+import {StopwatchComponent} from './stopwatch.component';
 
 describe('StopwatchComponent', () => {
   let component: StopwatchComponent;
@@ -8,9 +8,9 @@ describe('StopwatchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StopwatchComponent ]
+      declarations: [StopwatchComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

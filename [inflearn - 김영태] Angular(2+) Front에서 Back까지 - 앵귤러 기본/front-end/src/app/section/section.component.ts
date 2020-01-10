@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-section',
@@ -9,10 +9,11 @@ export class SectionComponent implements OnInit {
 
   present = 'welcome';
 
-  
-  constructor() { }
 
-  startTime($event){
+  constructor() {
+  }
+
+  startTime($event) {
     this.present = $event;
   }
 

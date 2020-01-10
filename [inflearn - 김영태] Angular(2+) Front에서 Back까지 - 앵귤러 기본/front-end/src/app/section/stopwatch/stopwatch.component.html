@@ -1,24 +1,24 @@
 <div class="title">
-    <div class="display">
+  <div class="display">
 
-        <app-time-display [inputData]="present" ></app-time-display>
+    <app-time-display [inputData]="present"></app-time-display>
 
-        <app-buttons (clickEvent)="startTime($event)"></app-buttons>
-
-      
-    </div>
+    <app-buttons (clickEvent)="startTime($event)"></app-buttons>
 
 
-    <a [routerLink] = "'/clock'">시계로이동</a>
+  </div>
 
-    <button (click)="pageToggleService.goPage('/clock')">
-        서비스이용시계로이동
-    </button>
 
-    {{pageToggleService.routingCount}}
+  <a [routerLink]="'/clock'">시계로이동</a>
 
-    <button (click)="pageToggleService.plusCount()">
-        숫자확인테스트
-    </button>
+  <button (click)="pageToggleService.goPage('/clock')">
+    서비스이용시계로이동
+  </button>
+
+  {{pageToggleService.routingCount}}
+
+  <button (click)="pageToggleService.plusCount()">
+    숫자확인테스트
+  </button>
 
 </div>
