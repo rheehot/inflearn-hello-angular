@@ -1,0 +1,30 @@
+<page-header [action]="phActionTpl">
+  <ng-template #phActionTpl>
+    <button nz-button nzType="primary">新建</button>
+  </ng-template>
+</page-header>
+<nz-card>
+  <p>테스트</p>
+  <nz-table #basicTable [nzData]="listOfData" *ngIf="task$ | async as tasks">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Desription</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let task of tasks.content">
+      <td>{{ task.id }}</td>
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <td>
+        <a>Action 一 {{ task.title }}</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a>Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+</nz-card>
