@@ -4,82 +4,80 @@
 
 <br/>
 
-## 기본 용어
+## 기본용어
 
-- Directives : 확장된 HTML로 custom 속성과 elements 태그 속성도 직접 정의할 수 있습니다.
+- **Directives** : 확장된 HTML로 `custom` 속성과 `elements` 태그 속성을 직접 정의할 수 있습니다.
 
-- Expresions : 변수와 함수를 HTML 파일에서 출력해야할 때 사용합니다.
+- **Expresions** : 변수와 함수를 HTML 파일에서 출력해야할 때 사용합니다. (Data Binding)
 
   ```html
   <p>hello {{name}}!</p>
   ```
 
-- Module : Directives, Controller 이것들을 하나로 모아놓은 Container를 Module 이라고 합니다. (의존성 주입 가능)
+- **Module** : `Directives`, `Controller` 이것들을 하나로 모아놓은 `Container` 입니다. (의존성 주입 가능)
 
-- Controller : 비즈니스 로직을 구현하는데만 사용합니다. View에 비즈니스 로직을 다룰때만 사용해야함
-  - 주의할 점
-    - DOM을 조작하면 안됨
-    - input, output을 조작하면 안됨
-
-- Service : Controller와 다르게 재사용가능한 비즈니스 로직 (싱글톤으로 구현돼있다.) 어플리케이션의 데이터를 관리할 때 사용하면 좋다.
+- **Controller** : View의 비즈니스 로직을 구현하는데만 사용합니다. 단, 주의할 점이 있는데 `DOM`과 `IO`을 조작하면 안됩니다.
+  
+- **Service** : `Controller`와 다르게 재사용가능한 비즈니스 로직으로 싱글톤 패턴으로 구현되어있으며, 애플리케이션의 데이터를 관리할 때 사용하면 좋습니다.
 
 <br/>
 
-## 개발 환경 구성
+## 개발환경 구성
 
-1. node 설치
+1. `node` 설치
 
-2. Angular-cli 설치
+2. `Angular-cli` 설치
 
    ```bash
-   npm install -g @angular/cli
+   $ npm install -g @angular/cli
    ```
 
 3. 설치 확인
 
    ```bash
-   ng version
+   $ ng version
    ```
 
 4. 프로젝트 생성
 
    ```bash
-   ng new {프로젝트명}
+   $ ng new {프로젝트 명}
    ```
 
 <br/>
 
 ## 프로젝트 구조
 
-- index.html : 사용자가 받는 파일 
+- **index.html** : 사용자가 받는 HTML 파일입니다.
 
-- main.ts : 가장 먼저 실행되는 javascript 파일
+- **main.ts** : 가장 먼저 실행되는 `javascript` 파일입니다.
 
-- src/app/* : 가장 신경 써야하는 부분
+- **src/app/*** : 구현한 Component, Module 등이 들어가는 중요한 디렉토리입니다.
 
-- (app.module.ts) AppModule class를 module로 만들어주겠다라는 뜻!
+- **app.module.ts**
 
   ```typescript
+  // AppModule class를 Module로 만들어줌
   @NgModule({
     declarations: [
       AppComponent
     ],
-    imports: [ // 다른 모듈들이 들어옴
+    imports: [ // 다른 Module을 사용
       BrowserModule,
       AppRoutingModule
     ],
-    providers: [], // view가 아닌 service 로직
-    bootstrap: [AppComponent] // 처음 실행할 컴포넌트 지정
+    providers: [], // View가 아닌 Service 로직
+    bootstrap: [AppComponent] // 처음 실행할 Component 지정
   })
   export class AppModule { }
   ```
 
-- app.componet.ts
+- **app.componet.ts**
 
   ```typescript
   @Component({ // 하나의 레고 조각
-    selector: 'app-root', // 태그 네임
-    templateUrl: './app.component.html', // 어떤 html 파일을 가지고 있는지
+    selector: 'app-root', // 태그 네임 <app-root></app-root>
+    templateUrl: './app.component.html', // HTML 파일의 경로
     styleUrls: ['./app.component.scss'] // css 값들이 들어감
   })
   export class AppComponent {
