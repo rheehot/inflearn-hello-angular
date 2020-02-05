@@ -194,7 +194,6 @@ export class HelloComponet {
   ```
 
   - 브라우저가 ES6를 읽지 못한다해도 typescript 빌드 파일 `tsconfig.json`에서 버전만 바꿔주면 알아서 컴파일 해줍니다.
-  - 
 
 ### typescript class 기능
 
